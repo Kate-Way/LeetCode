@@ -7,9 +7,9 @@ def search_matrix(matrix, target):
     right = len(matrix) - 1
     while left <= right:
         sub = (left+right)//2
-        if min(matrix[sub]) <= target <= max(matrix[sub]):
-            sub_left = 0
-            sub_right = len(matrix[sub]) - 1
+        sub_left = 0
+        sub_right = len(matrix[sub]) - 1
+        if matrix[sub][sub_left] <= target <= matrix[sub][sub_right]:
             while sub_left <= sub_right:
                 mid = (sub_left + sub_right)//2
                 if matrix[sub][mid] == target:
