@@ -19,7 +19,7 @@ def search_matrix(matrix, target):
                 else:
                     sub_left = mid + 1
             return False
-        elif min(matrix[sub]) >= target:
+        elif matrix[sub][sub_left] >= target:
             right = sub - 1
         else:
             left = sub + 1
